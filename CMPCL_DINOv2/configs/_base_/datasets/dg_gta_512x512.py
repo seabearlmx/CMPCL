@@ -5,7 +5,7 @@ _base_ = [
     "./mapillary_512x512.py",
 ]
 train_dataloader = dict(
-    batch_size=4,
+    batch_size=8,
     num_workers=4,
     persistent_workers=False,
     pin_memory=False,
@@ -13,7 +13,7 @@ train_dataloader = dict(
     dataset={{_base_.train_gta}},
 )
 val_dataloader = dict(
-    batch_size=4,
+    batch_size=1,
     num_workers=4,
     persistent_workers=False,
     sampler=dict(type="DefaultSampler", shuffle=False),
