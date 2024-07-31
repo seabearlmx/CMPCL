@@ -6,7 +6,7 @@ _base_ = [
     "./mapillary_512x512.py",
 ]
 train_dataloader = dict(
-    batch_size=4,
+    batch_size=8,
     num_workers=4,
     persistent_workers=False,
     pin_memory=False,
